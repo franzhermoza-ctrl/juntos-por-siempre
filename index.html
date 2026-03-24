@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gabriel y Andrea 💖</title>
+
+<meta name="description" content="Gabriel y Andrea por siempre ❤️ Un rincón lleno de nuestros recuerdos, amor y momentos juntos.">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff758c, #ffb199);
+    color: white;
+    text-align: center;
+}
+
+/* SECCIONES */
+.section {
+    display: none;
+    padding: 40px 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* PORTADA */
+.hero img {
+    width: 220px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BOTONES */
+button {
+    margin: 10px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #ff4b5c;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffe6e9;
+}
+
+/* GALERÍA */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* FRASE */
+.frase {
+    margin-top: 15px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- INICIO -->
+<div id="inicio" class="section active">
+    <h1>Gabriel y Andrea por siempre 💖</h1>
+    
+    <p class="frase">
+        Desde que llegaste a mi vida, todo tiene sentido…  
+        este espacio es solo una pequeña muestra de lo mucho que te amo ❤️
+    </p>
+
+    <!-- FOTO PRINCIPAL -->
+    <div class="hero">
+        <img src="portada.jpg">
+    </div>
+
+    <br>
+
+    <button onclick="mostrarSeccion('menu')">Entrar a nuestros recuerdos 💌</button>
+</div>
+
+<!-- MENÚ -->
+<div id="menu" class="section">
+    <h1>Nuestros Momentos 💕</h1>
+
+    <p class="frase">Cada recuerdo contigo es mi lugar favorito ✨</p>
+
+    <button onclick="mostrarSeccion('viajes')">Viajes ✈️</button>
+    <button onclick="mostrarSeccion('paseos')">Paseos 🌳</button>
+    <button onclick="mostrarSeccion('romantico')">Romántico 💖</button>
+    <button onclick="mostrarSeccion('comida')">Comidas 🍽️</button>
+
+    <br><br>
+    <button onclick="mostrarSeccion('inicio')">Volver al inicio 🏠</button>
+</div>
+
+<!-- VIAJES -->
+<div id="viajes" class="section">
+    <h2>Viajes ✈️</h2>
+    <p class="frase">Descubriendo el mundo contigo ❤️</p>
+
+    <div class="gallery">
+        <img src="viaje1.jpg">
+        <img src="viaje2.jpg">
+        <img src="viaje3.jpg">
+    </div>
+
+    <button onclick="mostrarSeccion('menu')">Volver</button>
+</div>
+
+<!-- PASEOS -->
+<div id="paseos" class="section">
+    <h2>Paseos 🌳</h2>
+    <p class="frase">Los momentos simples contigo son los mejores 💕</p>
+
+    <div class="gallery">
+        <img src="paseo1.jpg">
+        <img src="paseo2.jpg">
+        <img src="paseo3.jpg">
+    </div>
+
+    <button onclick="mostrarSeccion('menu')">Volver</button>
+</div>
+
+<!-- ROMÁNTICO -->
+<div id="romantico" class="section">
+    <h2>Momentos Románticos 💖</h2>
+    <p class="frase">Aquí vive nuestro amor ✨</p>
+
+    <div class="gallery">
+        <img src="romantico1.jpg">
+        <img src="romantico2.jpg">
+        <img src="romantico3.jpg">
+    </div>
+
+    <button onclick="mostrarSeccion('menu')">Volver</button>
+</div>
+
+<!-- COMIDA -->
+<div id="comida" class="section">
+    <h2>Comidas 🍽️</h2>
+    <p class="frase">Amor y comida… la mejor combinación 😋❤️</p>
+
+    <div class="gallery">
+        <img src="comida1.jpg">
+        <img src="comida2.jpg">
+        <img src="comida3.jpg">
+    </div>
+
+    <button onclick="mostrarSeccion('menu')">Volver</button>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function mostrarSeccion(id) {
+    let secciones = document.querySelectorAll('.section');
+    secciones.forEach(sec => sec.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
